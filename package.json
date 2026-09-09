@@ -1,0 +1,17 @@
+{
+  "name": "sgmc-materiais-cirurgicos",
+  "version": "1.0.0",
+  "description": "Sistema de Gestao de Materiais Cirurgicos (SGMC) - backend com PostgreSQL",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "pg": "^8.23.0"
+  },
+  "license": "ISC"
+}

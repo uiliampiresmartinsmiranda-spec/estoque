@@ -1,0 +1,21 @@
+databases:
+  - name: sgmc-materiais-cirurgicos-db
+    plan: free
+    region: virginia
+    postgresMajorVersion: "16"
+
+services:
+  - type: web
+    name: sgmc-materiais-cirurgicos
+    runtime: node
+    plan: free
+    region: virginia
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: sgmc-materiais-cirurgicos-db
+          property: connectionString
+      - key: NODE_ENV
+        value: production
